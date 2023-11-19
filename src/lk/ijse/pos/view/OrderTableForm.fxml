@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="root" prefHeight="529.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.OrderTableFormController">
+   <children>
+      <TableView fx:id="tblOrders" layoutX="39.0" layoutY="77.0" prefHeight="440.0" prefWidth="657.0">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="101.0" text="OrderId" />
+            <TableColumn fx:id="colDate" prefWidth="220.0" text="Data" />
+            <TableColumn fx:id="colCustomer" prefWidth="136.0" text="Customer" />
+            <TableColumn fx:id="colTotalCost" prefWidth="108.0" text="Total Cost" />
+            <TableColumn fx:id="ColOption" prefWidth="91.0" text="Option" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="14.0" layoutY="28.0" onAction="#btnBackToHomeAction" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #34495e; -fx-background-radius: 6px;" text="Back To Home" textFill="#e4d7d7" />
+   </children>
+</AnchorPane>

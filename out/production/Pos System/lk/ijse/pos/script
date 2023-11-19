@@ -1,0 +1,64 @@
+create database ARStore;
+use ARStore;
+create table if not exists Customer(
+    customerId varchar(50),
+    customerName varchar(45),
+    customerAddress varchar(50),
+    customerSalary double,
+    constraint primary key (customerId)
+
+
+);
+desc customer;
+show tables ;
+
+
+CREATE table  if not exists Item(
+    code varchar(45),
+    description varchar(50),
+    unitePrice double,
+    qtyOnHand int,
+    constraint primary key (code)
+);
+drop table Item;
+
+
+
+select  * from item;
+
+delete from customer;
+
+
+drop table `order`;
+create table if not exists `order`(
+    orderId varchar(45),
+    date varchar(250),
+    totalCost double,
+    customerId varchar(50),
+    constraint primary key (orderId),
+    constraint foreign key (customerId)references  customer(customerId)on
+                                delete cascade on UPDATE cascade
+
+
+);
+CREATE TABLE IF NOT EXISTS `Order Details`(
+                                              itemCode varchar(45),
+                                              orderId varchar(45),
+                                              unitePrice double,
+                                              qty INT,
+                                              CONSTRAINT PRIMARY KEY (itemCode,orderId),
+                                              CONSTRAINT FOREIGN KEY (itemCode)REFERENCES Item(code) ON DELETE CASCADE ON UPDATE CASCADE ,
+                                              CONSTRAINT FOREIGN KEY (orderId)REFERENCES `Order`(orderId) ON DELETE CASCADE ON UPDATE CASCADE
+
+);
+
+delete  from `order`;
+
+delete  from `order details`;
+
+
+
+show tables;
+
+select  * from  `order`;
+select * from `order details`

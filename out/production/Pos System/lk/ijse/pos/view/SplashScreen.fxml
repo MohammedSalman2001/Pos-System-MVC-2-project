@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="492.0" prefWidth="757.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.SplashScreenController">
+   <children>
+      <ImageView fitHeight="735.0" fitWidth="644.0" layoutX="55.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/8742.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblLoading" layoutX="273.0" layoutY="93.0" prefHeight="40.0" prefWidth="196.0" text="Welcome to AR Strore">
+         <font>
+            <Font name="Agency FB" size="27.0" />
+         </font></Label>
+      <Rectangle fx:id="rctContainer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="6.0" layoutX="55.0" layoutY="433.0" stroke="BLACK" strokeType="INSIDE" width="628.0" />
+      <Rectangle fx:id="recLoading" arcHeight="5.0" arcWidth="5.0" height="6.0" layoutX="55.0" layoutY="433.0" stroke="BLACK" strokeType="INSIDE" width="36.0">
+         <fill>
+            <LinearGradient endX="0.7135922330097088" endY="0.587378640776699" startX="0.19417475728155337" startY="0.5242718446601942">
+               <stops>
+                  <Stop color="#5193c6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+   </children>
+</AnchorPane>
